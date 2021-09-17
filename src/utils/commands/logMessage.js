@@ -8,7 +8,11 @@ function getErrorMessage(result) {
     return `Snapshot images do not match.`;
   }
 
-  return `Snapshots do not match:\n${result.diff}`;
+  return `Snapshots do not match:
+\`\`\`
+${result.diff}
+\`\`\`
+`;
 }
 
 function cleanupImage(image) {
