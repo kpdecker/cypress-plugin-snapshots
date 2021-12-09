@@ -11,6 +11,7 @@ function toMatchSnapshot(subject, options) {
       commandName,
       options,
       subject,
+      customSeparator: options.name && ` - ${options.name }#`,
     }).then(taskData => cy.task(
         MATCH_TEXT,
         taskData,
